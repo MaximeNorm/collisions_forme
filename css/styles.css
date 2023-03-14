@@ -1,0 +1,63 @@
+body {
+    margin: 0px;
+    background: #222;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+}
+
+#rects,
+#cercles {
+    height: 100%;
+    flex: 1;
+    position: relative;
+}
+
+#separator {
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    width: 4px;
+    height: 100%;
+    background-color: #111;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+#rect-cible,
+#cercle-cible {
+    position: absolute;
+    background-color: #444;
+    width: 250px;
+    height: 200px;
+}
+#cercle-cible {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+#rect-cible.collision {
+    background-image: url("../images/rect.jpg");
+    background-size: cover;
+}
+#cercle-cible.collision {
+    background-image: url("../images/cercle.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#rect-drag,
+#cercle-drag {
+    background-color: #ccc;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+#cercle-drag {
+    border-radius: 100%;
+}
+#rect-drag:hover,
+#cercle-drag:hover {
+    background-color: #fff;
+}
